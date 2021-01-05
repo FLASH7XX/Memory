@@ -38,24 +38,24 @@ int numbers[GAMEX / SQUAREX + 2][GAMEY / SQUAREY + 2];		//二维数组存放生�
 int bestStep = 0;			//最少步数
 int bestTime = 0;			//最短用时
 
-void initialize(void);		//初始化函数，包括绘制主界面、背景图、消息框、菜单按键、播放背景声音
-void setNumber(int);		//按时间生成随机数并存储在数组中
-void drawSquare(void);		//绘制主界面的所有小方格
-void gameStart(void);		//开始游戏函数，绘制所有小方格，记录时间、步数，每一步进行判断
-void bestScore(void);		//最佳成绩界面函数，包括最佳成绩的清除、读取与保存
-void importScore(void);		//读取或保存游戏函数，目前仅支持一次性读取或保存
+void initialize(void);			//初始化函数，包括绘制主界面、背景图、消息框、菜单按键、播放背景声音
+void setNumber(int);			//按时间生成随机数并存储在数组中
+void drawSquare(void);			//绘制主界面的所有小方格
+void gameStart(void);			//开始游戏函数，绘制所有小方格，记录时间、步数，每一步进行判断
+void bestScore(void);			//最佳成绩界面函数，包括最佳成绩的清除、读取与保存
+void importScore(void);			//读取或保存游戏函数，目前仅支持一次性读取或保存
 int load(void);				//读取文件
 int save(void);				//保存文件
 void rule(void);			//游戏规则函数，显示游戏简要规则以及版本号、制作组
 
 int main()
 {
-	initialize();						//初始化，绘制主界面、背景图、消息框、菜单按键、播放背景声音
+	initialize();							//初始化，绘制主界面、背景图、消息框、菜单按键、播放背景声音
 
 	while (1)
 	{
-		MOUSEMSG mouse;					//定义鼠标消息
-		mouse = GetMouseMsg();			//获取鼠标消息
+		MOUSEMSG mouse;						//定义鼠标消息
+		mouse = GetMouseMsg();					//获取鼠标消息
 		int x;							//记录鼠标x坐标所在的方格
 		int y;							//记录鼠标y坐标所在的方格
 
